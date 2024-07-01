@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00C9FF, #92FE9D);
+    color: #333;
+}
+
+.top-header {
+    background-color: rgba(255, 255, 255, 0.85); 
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#city-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    background-color: #ffffff;
+    color: #333;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #00C9FF; 
+    background-color: #f5f5f5;
+}
+
+#city-input::placeholder {
+    color: #bbb;
+}
+
+#city-form button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background: linear-gradient(to right, #6a11cb, #2575fc); 
+    color: #fff;
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#city-form button:hover {
+    background: linear-gradient(to right, #4a0dab, #1b6ae6); 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.weather-card p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00C9FF; 
+    margin: 0;
+}
+@media (max-width: 600px) {
+    #city-input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #city-form {
+        flex-direction: column;
+    }
+
+    .header-title {
+        font-size: 28px;
+    }
+
+    #city-form button {
+        width: 100%;
+    }
+
+    .weather-card {
+        width: 100%;
+        max-width: 90%;
+        padding: 20px;
+    }
+}
